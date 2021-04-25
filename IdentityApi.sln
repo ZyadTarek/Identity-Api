@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityApi.Models", "Ident
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityApi.Repository", "Repository\IdentityApi.Repository.csproj", "{2E98009C-303C-430C-927D-C14B558924AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityApi.Test", "IdentityApi.Test\IdentityApi.Test.csproj", "{6504D419-B3A5-4689-88B8-1281AAF85BE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2E98009C-303C-430C-927D-C14B558924AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E98009C-303C-430C-927D-C14B558924AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E98009C-303C-430C-927D-C14B558924AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6504D419-B3A5-4689-88B8-1281AAF85BE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6504D419-B3A5-4689-88B8-1281AAF85BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6504D419-B3A5-4689-88B8-1281AAF85BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6504D419-B3A5-4689-88B8-1281AAF85BE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IdentityApi.Models.Migrations
 {
     [DbContext(typeof(IdentityContext))]
-    [Migration("20210425074525_InitDB")]
+    [Migration("20210425115511_InitDB")]
     partial class InitDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -1,5 +1,6 @@
 ﻿using IdentityApi.Models;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace IdentityApi.Repository
@@ -56,6 +57,20 @@ namespace IdentityApi.Repository
 				return _context.Users.FirstOrDefault(u => u.Id == id);
 			}
 			return null;
+		}
+		public List<User> GetAllAdmins()
+		{
+			return _context.UserRoles.Where(a => a.RoleId == 2).Select(a => a.User).ToList();
+		}
+		public bool CanLogin(User user)
+		{
+			var u = new User();
+			if(user != null)
+			{
+			 u = GetAll().FirstOrDefault(c => c.Email == user.Email && c.Password == user.Password);
+			 if (u != null) return true;
+			}
+			return false;
 		}
 	}
 }

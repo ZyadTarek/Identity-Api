@@ -13,8 +13,6 @@ namespace IdentityApi.Models
 		public virtual DbSet<Role> Roles { get; set; }
 		public virtual DbSet<User_Role> UserRoles { get; set; }
 
-		public IdentityContext(DbContextOptions options):base(options)
-		{}
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			modelBuilder.Entity<User>().HasData(
@@ -29,6 +27,10 @@ namespace IdentityApi.Models
 				new User_Role { Id = 1, UserId= 1,RoleId=2 },
 				new User_Role { Id = 2, UserId= 2,RoleId=1 }
 	);
+		}
+		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+		{
+			optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=IdentityApi;Trusted_Connection=True;MultipleActiveResultSets=true");
 		}
 	}
 

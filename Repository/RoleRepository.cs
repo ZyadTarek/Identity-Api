@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IdentityApi.Repository
 {
-	class RoleRepository:IRepository<Role>
+	public class RoleRepository:IRepository<Role>
 	{
 		private IdentityContext _context;
 
