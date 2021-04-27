@@ -11,14 +11,11 @@ namespace IdentityApi.Test
 	{
 		private RoleRepository roleRepository;
 		private UserRepository userRepository;
-		private IdentityContext _db;
-		private DbContextOptions options;
 		public RoleRepoTest()
 		{
-          
-			_db = new IdentityContext();
-			roleRepository = new RoleRepository(_db);
-			userRepository = new UserRepository(_db);
+			
+			roleRepository = new RoleRepository(new IdentityContext());
+			userRepository = new UserRepository(new IdentityContext());
 		}
 		[Fact]
 		public void IsAdminRoleAvailableTrueTest()
@@ -28,7 +25,8 @@ namespace IdentityApi.Test
 			{
 				if(role.Name.Equals("Admin", StringComparison.OrdinalIgnoreCase))
 				{
-				Assert.True(role.Name.Equals("Admin", StringComparison.OrdinalIgnoreCase)); 
+				Assert.True(role.Name.Equals("Admin", StringComparison.OrdinalIgnoreCase));
+				break;
 				}
 			}
 			Assert.True(userRepository.GetAllAdmins().Count >= 1);
